@@ -9,6 +9,7 @@
     - [MVC(Model-View-Controller) Pattern](#mvcmodel-view-controller-pattern)
     - [Form Handling](#form-handling)
     - [Pug essential tutorial](#pug-essential-tutorial)
+  - [Preview](#preview)
   - [Other Notes](#other-notes)
       - [Why I lose code hint node.js module!!](#why-i-lose-code-hint-nodejs-module)
       - [Use "express-async-handler" without try...catch](#use-express-async-handler-without-trycatch)
@@ -82,6 +83,13 @@ Mongoose is an ORM on MongoDB. (Good for using schema, and of course, id key)
 > - `block` tag is used to mark up sections of content that may be replaced in a derived template (if the block is not redefined then its implementation in the base class is used). For example, 'block content' replaces 'content mark base on base template
 > - '[tag]!=' means any HTML tags or special characters within the error message will be rendered as raw HTML
 > - if you want to compare variable with `undefined`, it's necessary to put `undefined` before variable. Such as `(undefine===VARIABLE) ?`
+
+---
+
+## Preview
+![Create Instance Page](public/images/create-instance.png)
+
+![Book Details Page](public/images/book-details.png)
 
 ---
 
