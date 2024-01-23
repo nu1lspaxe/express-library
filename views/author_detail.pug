@@ -2,7 +2,7 @@ extends layout
 
 block content
 
-  h1 Author: #{author.name}
+  h1.text-center.mt-5.mb-3 Author: #{author.name}
   p Date: #{author.date_of_birth_formatted}
 
   div(style='margin-left:20px;margin-top:20px')
@@ -16,8 +16,7 @@ block content
           dd #{book.summary}
     else
       p This author has no books.
-  hr
-  p
-    a(href=author.url+'/delete') Delete Author
-  p 
-    a(href=author.url+'/update') Update Author
+
+  div.d-flex.justify-content-around.p-3
+    a.btn.btn-danger(role='button' href=author.url+'/delete') Delete Author
+    a.btn.btn-warning(role='button' href=author.url+'/update') Update Author

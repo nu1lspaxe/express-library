@@ -2,21 +2,21 @@ extends layout
 
 block content
 
-  h1 Genre: #{genre.name}
+  h1.text-center.mt-5.mb-3 Genre: #{genre.name}
 
   div(style='margin-left:20px;margin-top:20px')
 
-    h4 Books
     if genre_books.length
-      dl
+      div.row.g-2.row-cols-1.row-cols-md-3.row-cols-lg-5.row-cols.xl-8
         each book in genre_books
-          dt
-            a(href=book.url) #{book.title}
-          dd #{book.summary}
+          div.col
+            div.card.border-dark.mb-3.h-100.w-100(style="max-width: 18rem;")
+              div.card-body.text-dark
+                a.card-title(href=book.url) #{book.title}
+                p.card-text #{book.summary}
     else
       p This genre has no books.
-  hr
-  p 
-    a(href=genre.url+'/delete') Delete Genre
-  p
-    a(href=genre.url+'/update') Update Genre
+
+  div.d-flex.justify-content-around.p-3
+    a.btn.btn-danger(role='button' href=genre.url+'/delete') Delete Genre
+    a.btn.btn-warning(role='button' href=genre.url+'/update') Update Genre

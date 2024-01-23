@@ -1,13 +1,14 @@
 extends layout
 
 block content
-  h1= title
+  h1.text-center.mt-5.mb-3= title
 
   if author_list.length
-    ul
+    ul.list-group.list-group-flush
       each author in author_list
-        li
-          a(href=author.url) #{author.name}
-          |  (Date:  #{author.date_of_birth_formatted})
+        li.list-group-item
+          div.d-flex.justify-content-between
+            a(href=author.url) #{author.name}
+            |  Date:  #{author.date_of_birth_formatted}
   else
     p There are no authors.

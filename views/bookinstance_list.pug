@@ -1,22 +1,23 @@
 extends layout
 
 block content
-  h1= title
+  h1.text-center.mt-5.mb-5= title
 
   if bookinstance_list.length
-    ul
+    ul.list-group.list-group-flush
       each val in bookinstance_list
-        li
+        li.list-group-item
           a(href=val.url) #{val.book.title} : #{val.imprint} 
-          | -&nbsp;
-          if val.status=='Available'
-            span.text-success #{val.status}
-          else if val.status=='Maintenance'
-            span.text-danger #{val.status}
-          else
-            span.text-warning #{val.status}
-          if val.status!='Available'
-            span  (Due: #{val.due_back_formatted} )
+
+          div.d-flex.justify-content-end
+            if val.status=='Available'
+              span.text-success #{val.status}
+            else if val.status=='Maintenance'
+              span.text-danger #{val.status}
+            else
+              span.text-warning #{val.status}
+            if val.status!='Available'
+              span  (Due: #{val.due_back_formatted} )
 
   else
     p There are no book copies in this library.

@@ -11,6 +11,7 @@ var catalogRouter = require('./routes/catalog');
 
 var app = express(); 
 app.use(helmet()); // helps secure Express apps by setting HTTP response headers.
+app.use(express.static(__dirname + '/node_modules/bootstrap/dist'));
 app.disable('x-powered-by');
 
 // Set up mongoose connection

@@ -1,7 +1,7 @@
 extends layout
 
 block content
-  h1 Title: #{book.title}
+  h1.text-center.mt-5.mb-3 Title: #{book.title}
 
   p #[strong Author: ]
     a(href=book.author.url) #{book.author.name}
@@ -13,7 +13,7 @@ block content
       if index < book.genre.length - 1
         |,&nbsp;
 
-  div(style='margin-left:20px;margin-top:20px')
+  div.mt-5(style='margin-left:20px;margin-top:20px')
     h4 Copies
 
     each val in book_instances
@@ -32,8 +32,7 @@ block content
 
     else
       p There are no copies of this book in the library.
-  hr
-  p
-    a(href=book.url+'/delete') Delete Book
-  p
-    a(href=book.url+'/update') Update Book
+
+  div.d-flex.justify-content-around.p-3.mt-3
+    a.btn.btn-danger(role='button' href=book.url+'/delete') Delete Book
+    a.btn.btn-warning(role='button' href=book.url+'/update') Update Book

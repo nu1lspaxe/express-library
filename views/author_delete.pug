@@ -2,7 +2,7 @@ extends layout
 
 block content
 
-  h1 #{title}: #{author.name}
+  h1.text-center.mt-5.mb-3 #{title}: #{author.name}
   p= author.date_of_birth
 
   if author_books.length
