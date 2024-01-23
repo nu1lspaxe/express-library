@@ -44,6 +44,7 @@ Your every changes can not be seen soon iff restart server. Configure following 
    > },
    > ```
 3. run `npm run devstart` instead
+4. Except you set `PORT` in `.env` file, the default port is `3000`
 
 > Make sure your ip address is in `whitelist` of MongoDB Atlas.
 
