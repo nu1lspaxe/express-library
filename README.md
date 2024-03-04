@@ -33,7 +33,7 @@
 
 ### Dev Friendly Environment
 
-Your every changes can not be seen soon iff restart server. Configure following setting to help your developing process easier.
+Your every change can not be seen soon iff restart server. Configure following setting to help your developing process easier.
 
 1. `npm install --save-dev nodemon`
 2. In `package.json`, edit as below
@@ -54,7 +54,7 @@ Your every changes can not be seen soon iff restart server. Configure following 
 
 ### Mongoose Tutorial
 
-Mongoose is an ORM on MongoDB. (Good for using schema, and of course, id key)
+Mongoose is an ODM on MongoDB. (Good for using schema, and of course, id key)
 
 [Tutorial Link](https://developer.mozilla.org/zh-TW/docs/Learn/Server-side/Express_Nodejs/mongoose)
 
